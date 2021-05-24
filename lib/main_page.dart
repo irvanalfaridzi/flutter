@@ -73,7 +73,7 @@ class MainPage extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    width: 1240,
+                    width: MediaQuery.of(context).size.width - 200,
                     height: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -136,141 +136,133 @@ class MainPage extends StatelessWidget {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(top: 435),
-                      width: 1000,
+                      width: MediaQuery.of(context).size.width - 440,
                       height: 130,
                       decoration: BoxDecoration(
                         color: whiteColor,
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        runAlignment: WrapAlignment.center,
+                        spacing: 5,
+                        runSpacing: 5,
                         children: [
-                          SizedBox(
-                            width: 50,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Location",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Row(
+                          Container(
+                            width:
+                                (MediaQuery.of(context).size.width - 440) / 4,
+                            height: 70,
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Your Destination",
+                                    "Location",
                                     style: GoogleFonts.poppins(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: secondaryColor,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 30,
-                                  ),
-                                  Icon(
-                                    Icons.location_on_outlined,
-                                    size: 20,
-                                    color: secondaryColor,
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Your Destination",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          color: secondaryColor,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Icon(
+                                        Icons.location_on_outlined,
+                                        size: 20,
+                                        color: secondaryColor,
+                                      )
+                                    ],
                                   )
                                 ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          VerticalDivider(
-                            thickness: 3,
-                            endIndent: 40,
-                            indent: 40,
-                          ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Activity",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
                               ),
-                              Row(
-                                children: [
-                                  Text(
-                                    "Your Activity",
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: secondaryColor,
-                                    ),
+                            ),
+                          ),
+                          Container(
+                            width:
+                                (MediaQuery.of(context).size.width - 440) / 4,
+                            height: 70,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Activity",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  SizedBox(
-                                    width: 30,
-                                  ),
-                                  Icon(
-                                    Icons.run_circle_outlined,
-                                    size: 20,
-                                    color: secondaryColor,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          VerticalDivider(
-                            thickness: 3,
-                            endIndent: 40,
-                            indent: 40,
-                          ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Date",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    "Set Date",
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: secondaryColor,
+                                Row(
+                                  children: [
+                                    Text(
+                                      "Your Activity",
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: secondaryColor,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 30,
-                                  ),
-                                  Icon(
-                                    Icons.date_range_outlined,
-                                    size: 20,
-                                    color: secondaryColor,
-                                  )
-                                ],
-                              )
-                            ],
+                                    SizedBox(
+                                      width: 30,
+                                    ),
+                                    Icon(
+                                      Icons.run_circle_outlined,
+                                      size: 20,
+                                      color: secondaryColor,
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
-                          SizedBox(
-                            width: 200,
+                          Container(
+                            width:
+                                (MediaQuery.of(context).size.width - 440) / 4,
+                            height: 70,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Date",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "Set Date",
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: secondaryColor,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 30,
+                                    ),
+                                    Icon(
+                                      Icons.date_range_outlined,
+                                      size: 20,
+                                      color: secondaryColor,
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                           Container(
                             width: 70,
@@ -285,14 +277,61 @@ class MainPage extends StatelessWidget {
                               color: whiteColor,
                             ),
                           ),
-                          SizedBox(
-                            width: 50,
-                          ),
                         ],
                       ),
                     ),
                   )
                 ],
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Recommended Building',
+                      style: GoogleFonts.poppins(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'The most Brilliant reason NotCube has to be\nmost Convenient and Cheap',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: (MediaQuery.of(context).size.width - 296) / 3,
+                          height: 322,
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset("images/recomen-1.png"),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           ),
